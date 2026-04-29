@@ -1,0 +1,85 @@
+<div class="container">
+  <h2>Mes Recettes</h2>
+
+  <div class="actions">
+    <a routerLink="/form" class="btn btn-primary">+ Ajouter une recette</a>
+  </div>
+
+  <!-- Search and Filter Section -->
+  <div class="search-filter-section">
+    <h3>Rechercher et Filtrer</h3>
+
+    <div class="search-box">
+      <input
+        type="text"
+        [(ngModel)]="searchName"
+        placeholder="Rechercher par nom..."
+        (keyup.enter)="onSearch()"
+        class="search-input"
+      />
+      <button (click)="onSearch()" class="btn btn-search">🔍 Rechercher</button>
+    </div>
+
+    <div class="filter-box">
+      <div class="filter-group">
+        <label>Catégorie:</label>
+        <select
+          [(ngModel)]="selectedCategory"
+          (change)="onFilterChange()"
+          class="filter-select"
+        >
+          <option value="">Toutes les catégories</option>
+          <option *ngFor="let cat of categories" [value]="cat._id">
+            {{ cat.name }}
+          </option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label>Difficulté:</label>
+        <select
+          [(ngModel)]="selectedDifficulty"
+          (change)="onFilterChange()"
+          class="filter-select"
+        >
+          <option value="">Toutes les difficultés</option>
+          <option value="facile">Facile</option>
+          <option value="moyen">Moyen</option>
+          <option value="difficile">Difficile</option>
+        </select>
+      </div>
+
+      <button (click)="resetFilters()" class="btn btn-reset">✕ Réinitialiser</button>
+    </div>
+  </div>
+
+  <div *ngIf="loading" class="loading">
+    Chargement...
+  </div>
+
+  <div *ngIf="error" class="error">
+    {{ error }}
+  </div>
+
+  <div *ngIf="!loading && recettes.length === 0" class="empty">
+    Aucune recette trouvée. <a routerLink="/form">Créer la première</a>
+  </div>
+
+  <div class="recettes-grid">
+    <div *ngFor="let recette of recettes" class="recette-card">
+      <h3>{{ recette.name }}</h3>
+      <p class="description">{{ recette.description }}</p>
+      <div class="meta">
+        <span class="category">{{ recette.category.name }}</span>
+        <span class="difficulty" [ngClass]="recette.difficulty">
+          {{ recette.difficulty }}
+        </span>
+      </div>
+      <div class="actions">
+        <a [routerLink]="['/detail', recette._id]" class="btn btn-info">Voir</a>
+        <a [routerLink]="['/form', recette._id]" class="btn btn-warning">Modifier</a>
+        <button (click)="deleteRecette(recette._id)" class="btn btn-danger">Supprimer</button>
+      </div>
+    </div>
+  </div>
+</div>

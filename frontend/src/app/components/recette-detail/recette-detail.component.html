@@ -1,0 +1,37 @@
+<div class="container" *ngIf="!loading">
+  <div *ngIf="error" class="error">
+    {{ error }}
+  </div>
+
+  <div *ngIf="recette" class="detail">
+    <a routerLink="/" class="btn-back">← Retour</a>
+
+    <h1>{{ recette.name }}</h1>
+
+    <div class="meta">
+      <span class="category">{{ recette.category.name }}</span>
+      <span class="difficulty" [ngClass]="recette.difficulty">
+        {{ recette.difficulty }}
+      </span>
+    </div>
+
+    <div class="description">
+      <h3>Description</h3>
+      <p>{{ recette.description }}</p>
+    </div>
+
+    <div *ngIf="recette.ingredients && recette.ingredients.length > 0" class="ingredients">
+      <h3>Ingrédients</h3>
+      <ul>
+        <li *ngFor="let ingredient of recette.ingredients">
+          {{ ingredient }}
+        </li>
+      </ul>
+    </div>
+
+    <div class="actions">
+      <a [routerLink]="['/form', recette._id]" class="btn btn-warning">Modifier</a>
+      <a routerLink="/" class="btn btn-secondary">Retour à la liste</a>
+    </div>
+  </div>
+</div>
