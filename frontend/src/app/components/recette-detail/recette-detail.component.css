@@ -1,72 +1,101 @@
 .container {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 20px;
 }
 
 .btn-back {
   display: inline-block;
-  margin-bottom: 20px;
-  color: #007bff;
+  margin-bottom: 30px;
+  color: #667eea;
   text-decoration: none;
   cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  padding: 8px 0;
 }
 
 .btn-back:hover {
-  text-decoration: underline;
+  color: #764ba2;
+  transform: translateX(-4px);
 }
 
 h1 {
-  color: #333;
+  color: #2c3e50;
   margin-bottom: 20px;
+  font-size: 36px;
+  font-weight: 700;
 }
 
 .meta {
   display: flex;
-  gap: 10px;
-  margin-bottom: 30px;
+  gap: 12px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
 }
 
 .category {
-  background-color: #e9ecef;
-  padding: 6px 12px;
-  border-radius: 4px;
-  font-size: 14px;
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .difficulty {
-  padding: 6px 12px;
-  border-radius: 4px;
+  padding: 8px 16px;
+  border-radius: 20px;
   color: white;
-  font-size: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .difficulty.facile {
-  background-color: #28a745;
+  background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
 }
 
 .difficulty.moyen {
-  background-color: #ffc107;
-  color: black;
+  background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
 }
 
 .difficulty.difficile {
-  background-color: #dc3545;
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
 }
 
 .description {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .description h3,
 .ingredients h3 {
-  color: #333;
-  margin-bottom: 10px;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  margin-top: 0;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .description p {
-  color: #666;
-  line-height: 1.6;
+  color: #7f8c8d;
+  line-height: 1.8;
+}
+
+.ingredients {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .ingredients ul {
@@ -75,41 +104,69 @@ h1 {
 }
 
 .ingredients li {
-  color: #666;
-  padding: 8px 0;
-  border-bottom: 1px solid #eee;
+  color: #7f8c8d;
+  padding: 12px 0;
+  border-bottom: 1px solid #ecf0f1;
+  font-size: 15px;
+}
+
+.ingredients li:last-child {
+  border-bottom: none;
 }
 
 .ingredients li:before {
   content: "✓ ";
-  color: #28a745;
-  margin-right: 8px;
+  color: #27ae60;
+  margin-right: 12px;
+  font-weight: 700;
 }
 
 .actions {
   display: flex;
-  gap: 10px;
-  margin-top: 30px;
+  gap: 12px;
+  margin-top: 40px;
+  flex-wrap: wrap;
 }
 
 .btn {
-  padding: 10px 20px;
+  padding: 12px 28px;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   text-decoration: none;
   cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 14px;
 }
 
 .btn-warning {
-  background-color: #ffc107;
-  color: black;
-}
-
-.btn-secondary {
-  background-color: #6c757d;
+  background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
   color: white;
 }
 
+.btn-warning:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(243, 156, 18, 0.3);
+}
+
+.btn-secondary {
+  background-color: #95a5a6;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #7f8c8d;
+  transform: translateY(-2px);
+}
+
 .error {
-  color: #dc3545;
+  color: #c0392b;
+  background-color: #fadbd8;
+  padding: 15px 16px;
+  margin-bottom: 25px;
+  border: 1px solid #e74c3c;
+  border-left: 4px solid #e74c3c;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
 }

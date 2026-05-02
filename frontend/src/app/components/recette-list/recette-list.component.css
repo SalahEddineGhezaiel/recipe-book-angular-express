@@ -5,148 +5,204 @@
 }
 
 h2 {
-  margin-bottom: 20px;
-  color: #333;
+  margin-bottom: 30px;
+  color: #2c3e50;
+  font-size: 32px;
+  font-weight: 700;
 }
 
 .actions {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .btn {
-  padding: 8px 16px;
+  padding: 11px 24px;
   margin-right: 8px;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 14px;
 }
 
 .btn-primary {
-  background-color: #007bff;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
 }
 
 .btn-search {
-  background-color: #28a745;
+  background-color: #27ae60;
   color: white;
   margin-left: 10px;
+  box-shadow: 0 2px 8px rgba(39, 174, 96, 0.2);
+}
+
+.btn-search:hover {
+  background-color: #229954;
 }
 
 .btn-reset {
-  background-color: #6c757d;
+  background-color: #95a5a6;
   color: white;
   margin-left: auto;
 }
 
+.btn-reset:hover {
+  background-color: #7f8c8d;
+}
+
 .btn-info {
-  background-color: #17a2b8;
+  background-color: #3498db;
   color: white;
+}
+
+.btn-info:hover {
+  background-color: #2980b9;
 }
 
 .btn-warning {
-  background-color: #ffc107;
-  color: black;
+  background-color: #f39c12;
+  color: white;
+}
+
+.btn-warning:hover {
+  background-color: #e67e22;
 }
 
 .btn-danger {
-  background-color: #dc3545;
+  background-color: #e74c3c;
   color: white;
+}
+
+.btn-danger:hover {
+  background-color: #c0392b;
 }
 
 /* Search and Filter Section */
 .search-filter-section {
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 30px;
-  border: 1px solid #ddd;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .search-filter-section h3 {
   margin-top: 0;
-  margin-bottom: 15px;
-  color: #333;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-weight: 700;
+  font-size: 18px;
 }
 
 .search-box {
   display: flex;
-  gap: 10px;
-  margin-bottom: 15px;
+  gap: 12px;
+  margin-bottom: 20px;
 }
 
 .search-input {
   flex: 1;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
   font-size: 14px;
+  transition: all 0.3s ease;
 }
 
 .search-input:focus {
   outline: none;
-  border-color: #007bff;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }
 
 .filter-box {
   display: flex;
   gap: 15px;
   align-items: flex-end;
+  flex-wrap: wrap;
 }
 
 .filter-group {
   flex: 1;
+  min-width: 200px;
   display: flex;
   flex-direction: column;
 }
 
 .filter-group label {
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: #333;
-  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #2c3e50;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .filter-select {
-  padding: 8px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  padding: 11px 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
   font-size: 14px;
+  transition: all 0.3s ease;
+  background-color: white;
 }
 
 .filter-select:focus {
   outline: none;
-  border-color: #007bff;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }
 
 /* Grid */
 .recettes-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
 }
 
 .recette-card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 16px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.recette-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.15);
 }
 
 .recette-card h3 {
   margin-top: 0;
-  color: #333;
+  color: #2c3e50;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .description {
-  color: #666;
+  color: #7f8c8d;
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.6;
+  flex-grow: 1;
 }
 
 .meta {
-  margin: 12px 0;
+  margin: 15px 0;
   display: flex;
   justify-content: space-between;
 }
@@ -194,10 +250,33 @@ h2 {
 
 .loading, .error, .empty {
   text-align: center;
-  padding: 40px 20px;
+  padding: 60px 20px;
   font-size: 16px;
 }
 
+.loading {
+  color: #667eea;
+  font-weight: 600;
+}
+
 .error {
-  color: #dc3545;
+  color: #c0392b;
+  background-color: #fadbd8;
+  border: 1px solid #e74c3c;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.empty {
+  color: #7f8c8d;
+}
+
+.empty a {
+  color: #667eea;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.empty a:hover {
+  text-decoration: underline;
 }
