@@ -5,11 +5,10 @@ exports.getAll = async (req, res) => {
   try {
     const { name, category, difficulty } = req.query;
     
-    // Build filter object
     const filter = {};
     
     if (name) {
-      filter.name = { $regex: name, $options: 'i' }; // Case-insensitive search
+      filter.name = { $regex: name, $options: 'i' };
     }
     
     if (category && category !== '') {
