@@ -150,7 +150,7 @@ curl -X POST http://localhost:3000/api/categories \
 2. Fill in the form:
    ```
    Nom: Pâtes Carbonara
-   Description: Délicieuses pâtes avec œufs, bacon et parmesan
+   Description: Délicieuses pâtes avec œufs et parmesan
    Catégorie: Desserts (select from dropdown)
    Difficulté: facile
    Ingrédients: Pâtes, Œufs, Bacon, Parmesan
